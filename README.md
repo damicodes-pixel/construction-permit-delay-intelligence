@@ -6,7 +6,7 @@ The project asks a practical question:
 
 > **Can we identify patterns associated with construction-permit processing delays and predict which completed permits are likely to exceed a defined processing-time threshold?**
 
-Using public construction permit data from the District of Columbia, the project builds a complete analytics workflow in **Databricks and PySpark**, stores data using **Delta Lake**, develops a baseline predictive model using **Spark MLlib**, and communicates the results through **Tableau**.
+Using public construction permit data from the District of Columbia, the project builds a complete analytics workflow in **Databricks and PySpark**, stores data using **Delta Lake**, develops a baseline predictive model using **Spark MLlib**, and communicates the results through **Tableau Public**.
 
 ---
 
@@ -345,16 +345,16 @@ This creates a practical binary classification problem while preserving the orig
 
 The completed-permit population contains:
 
-| Metric             |      Value |
-| ------------------ | ---------: |
-| Count              |     17,365 |
-| Mean               | 42.25 days |
-| Standard deviation | 96.96 days |
-| Minimum            |     0 days |
-| 25th percentile    |     2 days |
-| Median             |     9 days |
-| 75th percentile    |    40 days |
-| Maximum            | 1,174 days |
+| Metric             |          Value |
+| ------------------ | -------------: |
+| Count              |     **17,365** |
+| Mean               | **42.25 days** |
+| Standard deviation | **96.96 days** |
+| Minimum            |     **0 days** |
+| 25th percentile    |     **2 days** |
+| Median             |     **9 days** |
+| 75th percentile    |    **40 days** |
+| Maximum            | **1,174 days** |
 
 The distribution is strongly right-skewed.
 
@@ -419,10 +419,10 @@ Earlier years contained relatively few observations:
 
 | Year | Completed Permits |
 | ---- | ----------------: |
-| 2023 |                18 |
-| 2024 |               319 |
-| 2025 |             1,598 |
-| 2026 |            15,430 |
+| 2023 |            **18** |
+| 2024 |           **319** |
+| 2025 |         **1,598** |
+| 2026 |        **15,430** |
 
 Because the earlier cohorts were small and the 2026 cohort is strongly affected by the observation window, **2025 was selected as the primary modeling cohort**.
 
@@ -673,11 +673,13 @@ A different operational definition of delay would produce a different target and
 
 # Tableau Dashboard
 
-The project includes a Tableau dashboard designed to communicate the most important findings to a non-technical audience.
+The project includes an interactive **Tableau Public** dashboard designed to communicate the most important findings to a non-technical audience.
+
+### Interactive Dashboard
+
+**[View the Construction Permit Delay Intelligence dashboard on Tableau Public](https://public.tableau.com/app/profile/damilola.ogunsuyi/viz/constructionpermitvisualization/DelayRateOverTime)**
 
 The dashboard focuses on operationally meaningful questions rather than model internals.
-
-Planned dashboard components include:
 
 ### Processing Time Distribution
 
@@ -823,6 +825,8 @@ construction-permit-delay-intelligence/
 │
 └── .gitignore
 ```
+
+The raw construction permit dataset is intentionally excluded from version control.
 
 ---
 
@@ -1041,18 +1045,19 @@ This would help translate model predictions into more actionable insights for pe
 * [x] Logistic Regression baseline
 * [x] Model evaluation
 * [x] Tableau dashboard development
+* [x] Tableau Public publication
 * [x] GitHub repository preparation
 
 ## Current Deliverables
 
-The project currently contains:
+The project contains:
 
 * Databricks/PySpark notebooks
 * Delta Lake data-engineering workflow
 * Exploratory analysis
 * Machine-learning baseline
 * Model evaluation
-* Tableau dashboard
+* Tableau Public dashboard
 * Project documentation
 
 ---
